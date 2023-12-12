@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitorizare Consum Energie</title>
+    <link rel="stylesheet" href="pagina_parinte.css">
+    <link rel="stylesheet" href="stil_monitorizare_consum.css">
+</head>
+<body>
+    <header>
+        <h1>Monitorizare consum energie</h1>
+    </header>
+
+    <nav>
+        <a href="pagina_parinte.html">Setarea iluminatului</a>
+        <a href="monitorizare_consum_energie.html">Monitorizare consum energie</a>
+        <a href="lista_cumparaturi.html">Lista de cumpărături</a>
+        <a href="planificare_evenimente.html">Planificare evenimente</a>
+        <a href="monitorizare_sanatate.html">Monitorizare sănătate</a>
+    </nav>
+
+    <main>
+        <section id="dispozitive">
+            <h2>Dispozitive</h2>
+            <ul id="listaDispozitive">
+                <li>
+                    <strong id="numeTelevizor">Televizor</strong>
+                    <span id="consumTelevizor">0W</span>
+                    <button onclick="seteazaTemporizator('Televizor')">Setează Temporizator</button>
+                    <button onclick="activeazaNotificari('Televizor')">Activează Notificări</button>
+                </li>
+                <li>
+                    <strong id="numeMasinaSpalat">Masina de spălat</strong>
+                    <span id="consumMasinaSpalat">0W</span>
+                    <button onclick="seteazaTemporizator('Masina de spălat')">Setează Temporizator</button>
+                    <button onclick="activeazaNotificari('Masina de spălat')">Activează Notificări</button>
+                </li>
+                <li>
+                    <strong id="numeIluminat">Sistem de iluminat</strong>
+                    <span id="consumIluminat">0W</span>
+                    <button onclick="seteazaTemporizator('Sistem de iluminat')">Setează Temporizator</button>
+                    <button onclick="activeazaNotificari('Sistem de iluminat')">Activează Notificări</button>
+                </li>
+                <!-- Adaugă și alte dispozitive aici -->
+            </ul>
+        </section>
+
+        <section id="gestiuneConsum">
+            <h2>Gestiune Consum</h2>
+        </section>
+    </main>
+
+    <script src="script_monitorizare_consum.js"></script>
+</body>
+</html>

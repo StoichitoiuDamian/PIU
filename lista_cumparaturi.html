@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Cumpărături</title>
+    <link rel="stylesheet" href="pagina_parinte.css">
+    <link rel="stylesheet" href="stil_lista_cumparaturi.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Cumpărături</h1>
+    </header>
+
+    <nav>
+        <a href="pagina_parinte.html">Setarea iluminatului</a>
+        <a href="monitorizare_consum_energie.html">Monitorizare consum energie</a>
+        <a href="lista_cumparaturi.html">Lista de cumpărături</a>
+        <a href="planificare_evenimente.html">Planificare evenimente</a>
+        <a href="monitorizare_sanatate.html">Monitorizare sănătate</a>
+    </nav>
+
+    <main>
+        <section id="gestiuneCumparaturi">
+            <h2>Adaugă Produs</h2>
+            <form id="formCumparaturi">
+                <label for="numeProdus">Nume Produs:</label>
+                <input type="text" id="numeProdus" required>
+
+                <label for="cantitateProdus">Cantitate:</label>
+                <input type="number" id="cantitateProdus" required>
+
+                <button type="button" onclick="adaugaProdus()">Adaugă Produs</button>
+            </form>
+        </section>
+
+        <section id="listaCumparaturi">
+            <h2>Lista de Cumpărături</h2>
+            <ul id="listaProduse">
+                <!-- Aici vor fi afișate produsele -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="script_lista_cumparaturi.js"></script>
+</body>
+</html>

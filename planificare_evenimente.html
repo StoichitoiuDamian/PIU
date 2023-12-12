@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificare Evenimente Familiale</title>
+    <link rel="stylesheet" href="pagina_parinte.css">
+    <link rel="stylesheet" href="stil_planificare_evenimente.css">
+</head>
+<body>
+    <header>
+        <h1>Planificare Evenimente Familiale</h1>
+    </header>
+
+    <nav>
+        <a href="pagina_parinte.html">Setarea iluminatului</a>
+        <a href="monitorizare_consum_energie.html">Monitorizare consum energie</a>
+        <a href="lista_cumparaturi.html">Lista de cumpărături</a>
+        <a href="planificare_evenimente.html">Planificare evenimente</a>
+        <a href="monitorizare_sanatate.html">Monitorizare sănătate</a>
+    </nav>
+
+    <main>
+        <section id="gestiuneEvenimente">
+            <h2>Adaugă Eveniment Nou</h2>
+            <form id="formEveniment">
+                <label for="numeEveniment">Nume Eveniment:</label>
+                <input type="text" id="numeEveniment" required>
+
+                <label for="dataEveniment">Data Evenimentului:</label>
+                <input type="date" id="dataEveniment" required>
+
+                <button type="button" onclick="adaugaEveniment()">Adaugă Eveniment</button>
+            </form>
+        </section>
+
+        <section id="listaEvenimente">
+            <h2>Lista Evenimente</h2>
+            <ul id="listaEvenimente">
+                <!-- Aici vor fi afișate evenimentele -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="script_planificare_evenimente.js"></script>
+</body>
+</html>

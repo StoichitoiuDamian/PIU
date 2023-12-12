@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitorizare Sănătate</title>
+    <link rel="stylesheet" href="pagina_parinte.css">
+    <link rel="stylesheet" href="stil_monitorizare_sanatate.css">
+</head>
+<body>
+    <header>
+        <h1>Monitorizare Sănătate</h1>
+    </header>
+
+    <nav>
+        <a href="pagina_parinte.html">Setarea iluminatului</a>
+        <a href="monitorizare_consum_energie.html">Monitorizare consum energie</a>
+        <a href="lista_cumparaturi.html">Lista de cumpărături</a>
+        <a href="planificare_evenimente.html">Planificare evenimente</a>
+        <a href="monitorizare_sanatate.html">Monitorizare sănătate</a>
+    </nav>
+
+    <main>
+        <section id="programariMedic">
+            <h2>Programări la Medic</h2>
+            <ul id="listaProgramari">
+                <!-- Aici vor fi afișate programările la medic -->
+            </ul>
+            <form id="formProgramare">
+                <label for="numeMedic">Nume Medic:</label>
+                <input type="text" id="numeMedic" required>
+
+                <label for="dataProgramare">Data Programării:</label>
+                <input type="date" id="dataProgramare" required>
+
+                <button type="button" onclick="adaugaProgramare()">Adaugă Programare</button>
+            </form>
+        </section>
+
+        <section id="istoricMedical">
+            <h2>Istoric Medical</h2>
+            <ul id="listaIstoric">
+                <!-- Aici vor fi afișate informațiile din istoricul medical -->
+            </ul>
+            <form id="formIstoric">
+                <label for="dataIstoric">Data Evenimentului:</label>
+                <input type="date" id="dataIstoric" required>
+
+                <label for="detaliiIstoric">Detalii Eveniment:</label>
+                <textarea id="detaliiIstoric" required></textarea>
+
+                <button type="button" onclick="adaugaIstoric()">Adaugă Eveniment</button>
+            </form>
+        </section>
+
+        <section id="notificariMedicamente">
+            <h2>Notificări Medicamente</h2>
+            <button onclick="seteazaNotificare()">Setează Notificare</button>
+        </section>
+
+        <section id="medicamenteBunici">
+            <h2>Medicamente pentru Bunici</h2>
+            <ul id="listaMedicamente">
+                <!-- Aici vor fi afișate medicamentele pentru bunici -->
+            </ul>
+            <form id="formMedicamente">
+                <label for="numeMedicament">Nume Medicament:</label>
+                <input type="text" id="numeMedicament" required>
+
+                <label for="oraAdministrare">Oră Administrare:</label>
+                <input type="time" id="oraAdministrare" required>
+
+                <button type="button" onclick="adaugaMedicament()">Adaugă Medicament</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script_monitorizare_sanatate.js"></script>
+</body>
+</html>
