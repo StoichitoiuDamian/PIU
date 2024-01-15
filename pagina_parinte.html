@@ -4,19 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Părinte</title>
-    <link rel="stylesheet" href="pagina_parinte.css"> <!-- Legătură către noul fișier CSS -->
+    <link rel="stylesheet" href="pagina_parinte.css">
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script>
+        function updateBackgroundColor(rowId, colorInputId) {
+            var row = document.getElementById(rowId);
+            var colorInput = document.getElementById(colorInputId);
+            var selectedColor = colorInput.value;
+            row.style.backgroundColor = selectedColor;
+        }
+
+        // Funcția pentru logout
+        function logout() {
+            window.location.href = "login.html";
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Setarea iluminatului</h1>
+        <img src="familie.jpg" alt="Familie">
+        <h1>Configurare iluminat</h1>
     </header>
 
     <nav>
-        <a href="pagina_parinte.html">Setarea iluminatului</a>
+        <a href="pagina_parinte.html">Configurare iluminat</a>
         <a href="monitorizare_consum_energie.html">Monitorizare consum energie</a>
         <a href="lista_cumparaturi.html">Lista de cumpărături</a>
         <a href="planificare_evenimente.html">Planificare evenimente</a>
         <a href="monitorizare_sanatate.html">Monitorizare sănătate</a>
+        <button id="logoutButton" onclick="logout()">Logout</button>
     </nav>
 
     <main>
@@ -24,25 +45,40 @@
             <thead>
                 <tr>
                     <th>Cameră</th>
+                    <th>Imagine</th>
                     <th>Culoare</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Dormitor</td>
-                    <td><input type="color" id="culoareDormitor"></td>
+                <tr id="dormitorParintiRow">
+                    <td>Dormitorul parintilor</td>
+                    <td><img src="dormitorParinti.png" alt="Dormitor parinti"></td>
+                    <td><input type="color" id="culoareDormitor" onchange="updateBackgroundColor('dormitorParintiRow', 'culoareDormitor')"></td>
                 </tr>
-                <tr>
+                <tr id="dormitorCopiiRow">
+                    <td>Dormitorul copiilor</td>
+                    <td><img src="dormitorcopii.jpg" alt="Dormitor copii"></td>
+                    <td><input type="color" id="culoareDormitorCopii" onchange="updateBackgroundColor('dormitorCopiiRow', 'culoareDormitorCopii')"></td>
+                </tr>
+                <tr id="dormitorBuniciRow">
+                    <td>Dormitorul bunicilor</td>
+                    <td><img src="dormitorBunici.jpg" alt="Dormitor bunici"></td>
+                    <td><input type="color" id="culoareDormitorBunici" onchange="updateBackgroundColor('dormitorBuniciRow', 'culoareDormitorBunici')"></td>
+                </tr>
+                <tr id="baieRow">
                     <td>Baie</td>
-                    <td><input type="color" id="culoareBaie"></td>
+                    <td><img src="baie.jpg" alt="Baie"></td>
+                    <td><input type="color" id="culoareBaie" onchange="updateBackgroundColor('baieRow', 'culoareBaie')"></td>
                 </tr>
-                <tr>
+                <tr id="bucatarieRow">
                     <td>Bucătărie</td>
-                    <td><input type="color" id="culoareBucatarie"></td>
+                    <td><img src="bucatariejpg.jpg" alt="Bucătărie"></td>
+                    <td><input type="color" id="culoareBucatarie" onchange="updateBackgroundColor('bucatarieRow', 'culoareBucatarie')"></td>
                 </tr>
-                <tr>
+                <tr id="holRow">
                     <td>Hol</td>
-                    <td><input type="color" id="culoareHol"></td>
+                    <td><img src="hol.jpg" alt="Hol"></td>
+                    <td><input type="color" id="culoareHol" onchange="updateBackgroundColor('holRow', 'culoareHol')"></td>
                 </tr>
             </tbody>
         </table>

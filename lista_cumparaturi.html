@@ -9,6 +9,7 @@
 </head>
 <body>
     <header>
+        <img src="familie.jpg" alt="Familie">
         <h1>Lista de Cumpărături</h1>
     </header>
 
@@ -18,6 +19,7 @@
         <a href="lista_cumparaturi.html">Lista de cumpărături</a>
         <a href="planificare_evenimente.html">Planificare evenimente</a>
         <a href="monitorizare_sanatate.html">Monitorizare sănătate</a>
+        <button id="logoutButton" onclick="logout()">Logout</button>
     </nav>
 
     <main>
@@ -37,11 +39,38 @@
         <section id="listaCumparaturi">
             <h2>Lista de Cumpărături</h2>
             <ul id="listaProduse">
-                <!-- Aici vor fi afișate produsele -->
             </ul>
         </section>
     </main>
 
+    <section id="imaginiAlimente">
+        <h2>Alegeți Alimentul</h2>
+        <div class="imagini-container">
+            <img src="oua.jpg" alt="Oua" onmousedown="afiseazaPopup('Oua')">
+            <img src="apa.jpg" alt="Apa" onmousedown="afiseazaPopup('Apa')">
+            <img src="carne.jpg" alt="Carne" onmousedown="afiseazaPopup('Carne')">
+            <img src="motz.jpg" alt="Motzz" onmousedown="afiseazaPopup('Motz')">
+            <img src="lapte.jpg" alt="Lapte" onmousedown="afiseazaPopup('Lapte')">
+            <img src="paine.jpg" alt="Paine" onmousedown="afiseazaPopup('Paine')">
+            
+           
+        </div>
+    </section>
+
+   
+    <div id="popup">
+        <div class="popup-content">
+            
+        </div>
+    </div>
+
     <script src="script_lista_cumparaturi.js"></script>
+
+   
+    <script>
+        function logout() {
+            window.location.href = "login.html";
+        }
+    </script>
 </body>
 </html>

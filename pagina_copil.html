@@ -3,10 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configurare Program Iluminat - Copil</title>
+    <title>Dashboard - Părinte</title>
+    <link rel="stylesheet" href="pagina_parinte.css">
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script>
+        function updateBackgroundColor(rowId, colorInputId) {
+            var row = document.getElementById(rowId);
+            var colorInput = document.getElementById(colorInputId);
+            var selectedColor = colorInput.value;
+            row.style.backgroundColor = selectedColor;
+        }
+
+        
+        function logout() {
+            window.location.href = "login.html";
+        }
+    </script>
 </head>
 <body>
-    <h1>Bun venit, copil!</h1>
-    <!-- Adaugă conținut pentru configurarea programului de iluminat -->
+    <header>
+        <img src="familie.jpg" alt="Familie">
+        <h1>Configurare iluminat</h1>
+    </header>
+
+    <nav>
+        <button id="logoutButton" onclick="logout()">Logout</button>
+    </nav>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cameră</th>
+                    <th>Imagine</th>
+                    <th>Culoare</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="dormitorCopiiRow">
+                    <td>Dormitorul copiilor</td>
+                    <td><img src="dormitorcopii.jpg" alt="Dormitor copii"></td>
+                    <td><input type="color" id="culoareDormitorCopii" onchange="updateBackgroundColor('dormitorCopiiRow', 'culoareDormitorCopii')"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>

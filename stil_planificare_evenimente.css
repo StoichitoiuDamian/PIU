@@ -80,3 +80,14 @@ li {
 li:last-child {
     border-bottom: none;
 }
+
+button {
+    padding: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s; /* Adăugăm o tranziție de culoare la hover */
+}

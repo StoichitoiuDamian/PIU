@@ -2,46 +2,67 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 header {
     background-color: #3498db;
     color: white;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    width: 150px;
+    height: auto;
+}
+
+h1 {
+    font-size: 36px;
 }
 
 nav {
     background-color: #2c3e50;
     padding: 15px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    padding: 10px 20px;
+    border-radius: 25px; /* Modificăm raza pentru a face marginile rotunde */
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 nav a:hover {
     background-color: #34495e;
+    transform: scale(1.1);
 }
+
 main {
     max-width: 800px;
     margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px; /* Modificăm raza pentru a face marginile rotunde */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
-    padding: 12px;
+    padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
@@ -52,7 +73,7 @@ th {
 }
 
 tr:hover {
-    background-color: #f5f5f5;
+    background-color: #f2f2f2;
 }
 
 input[type="color"] {
@@ -61,23 +82,22 @@ input[type="color"] {
     border: none;
     padding: 0;
 }
-body {
-    color: #333;
+header img {
+    width: 300px; /* sau orice altă valoare dorită pentru lățime */
+    height: auto; /* menține proporțiile imaginii */
 }
 
-h1, h2 {
-    color: #000000;
+button {
+    padding: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 25px; /* Modificăm raza pentru a face marginile rotunde */
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
 }
 
-h2 {
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 8px;
-}
-
-p {
-    line-height: 1.6;
-}
-td {
-    font-weight: bold;
-    color: #3498db;
+button:hover {
+    background-color: #2980b9; /* Schimbăm culoarea la hover */
 }
